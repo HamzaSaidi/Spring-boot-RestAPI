@@ -1,5 +1,6 @@
 package com.hamza.productManagement.Model;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Entity;
@@ -8,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@JsonFilter("myFilter")
 public class produit {
     public produit() {
     }
